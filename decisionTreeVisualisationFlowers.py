@@ -47,4 +47,9 @@ graph = pydot.graph_from_dot_data(dot_data.getvalue())
 graph.write_pdf("flowers.pdf")
 
 
+#Print original values of your 3 test samples (you can use pdf file with decision tree algorithm to see if your model is OK)
+print flowers.feature_names, flowers.target_names
+print test_data[0], test_target[0]
+print test_data[1], test_target[1]
+print test_data[2], test_target[2]
 
