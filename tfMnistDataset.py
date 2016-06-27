@@ -1,8 +1,7 @@
 #The downloaded MNIST database of handwritten digits, from http://yann.lecun.com/exdb/mnist/, is for our convenience split into three parts:
 # 55,000 data points of training data (mnist.train), 10,000 points of test data (mnist.test), and 5,000 points of validation data (mnist.validation).
 from tensorflow.examples.tutorials.mnist import input_data
-mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
-
+mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)   #one_hot is vector with 1 and all 0's like:  [0, 0, 0 ,0 ,1 ,0 ]
 #Sample code to process sample mnist data
 import tensorflow as tf
 
