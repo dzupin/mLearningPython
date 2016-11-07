@@ -4,6 +4,9 @@ from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)   #one_hot is vector with 1 and all 0's like:  [0, 0, 0 ,0 ,1 ,0 ]
 #Sample code to process sample mnist data
 import tensorflow as tf
+#for performance benchmanrk measure start and later end time stamp
+import time
+start = time.clock()
 
 #Define your x(input) W(weight) and b(bias)
 x = tf.placeholder(tf.float32, [None, 784])
@@ -35,3 +38,6 @@ correct_prediction = tf.equal(tf.argmax(y,1), tf.argmax(y_,1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
 print(sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels}))
+#get and then show elapsed time
+end = time.clock()
+print(end-start)
