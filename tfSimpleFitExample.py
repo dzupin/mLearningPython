@@ -1,5 +1,8 @@
 import tensorflow as tf
 import numpy as np
+#for performance benchmanrk measure start and later end time stamp
+import time
+start = time.clock()
 
 # Create 100 phony x, y data points in NumPy, y = x * 0.1 + 0.3
 x_data = np.random.rand(100).astype(np.float32)
@@ -31,3 +34,8 @@ for step in range(201):
         print(step, sess.run(W), sess.run(b))
 
 # Learns best fit is W: [0.1], b: [0.3]
+
+
+#get and then show elapsed time
+end = time.clock()
+print(end-start)
