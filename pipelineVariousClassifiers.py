@@ -3,7 +3,9 @@ from sklearn.cross_validation import  train_test_split
 from sklearn import tree
 from sklearn.metrics import accuracy_score
 from sklearn.neighbors import KNeighborsClassifier
+import time
 
+start = time.time()
 iris = datasets.load_iris()
 
 #conv
@@ -32,6 +34,9 @@ predictions2 = my_classifier2.predict(X_test)
 print predictions2
 #Now check accuracy of your predictions
 print accuracy_score(y_test,predictions2)
+end = time.time()
+
+print(end-start)
 
 
 

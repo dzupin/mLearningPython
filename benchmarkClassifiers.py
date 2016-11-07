@@ -12,6 +12,9 @@ from sklearn import datasets
 from sklearn.cross_validation import train_test_split
 
 import numpy as np
+#for performance benchmanrk measure start and later end time stamp
+import time
+start = time.clock()
 
 def euc(a,b):
 	return distance.euclidean(a,b)
@@ -72,3 +75,6 @@ for i in range (0,1000):
 	accuracies.append(accuracy)
 
 print 'sklearn accuracy mean:', np.mean(accuracies)
+#get and then show elapsed time
+end = time.clock()
+print(end-start)
