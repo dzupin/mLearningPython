@@ -1,3 +1,8 @@
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+from sklearn import datasets
+from sklearn.decomposition import PCA
+
 """
 The Iris dataset consists of 3 different types of irises (Setosa, Versicolour, and Virginica) petal and sepal length,
 stored in a 150x4 numpy.ndarray
@@ -11,10 +16,7 @@ http://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html
 
 print(__doc__)
 
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-from sklearn import datasets
-from sklearn.decomposition import PCA
+
 
 # import some data to play with
 iris = datasets.load_iris()

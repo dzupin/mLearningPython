@@ -12,7 +12,7 @@ classifier = classifier.fit(features,labels)
 
 #use your trainned classifier to predict/classify new samples
 #Comment: Result bellow is [0]: and it shows that heavy fruit with bumpy surface is predicted to be Orange
-print classifier.predict([[150,1]])
+print (classifier.predict([[150,1]]))
 
 #Comment: Result below is [4]: and it shows that heavy fruit with smooth surface is predicted to be Apple.
-print classifier.predict([[190,0]])
+print (classifier.predict([[190,0]]))
