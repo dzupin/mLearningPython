@@ -64,7 +64,7 @@ for i in range (0,1000):
 	accuracies.append(accuracy)
 
 
-print 'ScrappyKNN accuracy mean:', np.mean(accuracies)
+print ('ScrappyKNN accuracy mean:', np.mean(accuracies))
 
 accuracies = []
 
@@ -74,7 +74,7 @@ for i in range (0,1000):
 	accuracy = accuracy_score(y_test, predictions)
 	accuracies.append(accuracy)
 
-print 'sklearn accuracy mean:', np.mean(accuracies)
+print ('sklearn accuracy mean:', np.mean(accuracies))
 #get and then show elapsed time
 end = time.clock()
 print(end-start)

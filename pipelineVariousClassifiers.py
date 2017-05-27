@@ -21,9 +21,9 @@ my_classifier = tree.DecisionTreeClassifier()
 my_classifier = my_classifier.fit(X_train, y_train)
 #Predict using your classifier
 predictions = my_classifier.predict(X_test)
-print predictions
+print (predictions)
 #Now check accuracy of your predictions
-print accuracy_score(y_test,predictions)
+print (accuracy_score(y_test,predictions))
 
 #Second version of classifier
 my_classifier2 = KNeighborsClassifier()
@@ -31,9 +31,9 @@ my_classifier2 = KNeighborsClassifier()
 my_classifier2 = my_classifier2.fit(X_train, y_train)
 #Predict using your classifier
 predictions2 = my_classifier2.predict(X_test)
-print predictions2
+print (predictions2)
 #Now check accuracy of your predictions
-print accuracy_score(y_test,predictions2)
+print (accuracy_score(y_test,predictions2))
 end = time.time()
 
 print(end-start)

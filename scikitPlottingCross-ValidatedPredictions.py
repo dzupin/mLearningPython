@@ -1,6 +1,10 @@
 from sklearn import datasets
 from sklearn.cross_validation import cross_val_predict
 from sklearn import linear_model
+import sys
+import matplotlib
+if sys.version_info[0] > 2:
+    matplotlib.use('Qt5Agg') # You need to installpyqt5 library for Python3: sudo apt-get install python3-pyqt5
 import matplotlib.pyplot as plt
 
 lr = linear_model.LinearRegression()

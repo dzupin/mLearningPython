@@ -10,7 +10,10 @@ http://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html
 """
 
 print(__doc__)
-
+import matplotlib
+import sys
+if sys.version_info[0] > 2:
+    matplotlib.use('Qt5Agg') # You need to installpyqt5 library for Python3: sudo apt-get install python3-pyqt5
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from sklearn import datasets

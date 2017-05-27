@@ -4,6 +4,10 @@ http://scikit-learn.org/stable/auto_examples/neighbors/plot_classification.html#
 """
 print(__doc__)
 import numpy as np
+import matplotlib
+import sys
+if sys.version_info[0] > 2:
+    matplotlib.use('Qt5Agg') # You need to installpyqt5 library for Python3: sudo apt-get install python3-pyqt5
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 from sklearn import neighbors, datasets

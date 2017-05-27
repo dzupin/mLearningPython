@@ -8,7 +8,10 @@ of informative features and clusters per class.
 http://scikit-learn.org/stable/auto_examples/datasets/plot_random_dataset.html
 """
 print(__doc__)
-
+import matplotlib
+import sys
+if sys.version_info[0] > 2:
+    matplotlib.use('Qt5Agg') # You need to installpyqt5 library for Python3: sudo apt-get install python3-pyqt5
 import matplotlib.pyplot as plt
 
 from sklearn.datasets import make_classification
