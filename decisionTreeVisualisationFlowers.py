@@ -6,7 +6,8 @@ import sys
 if sys.version_info[0] > 2:
     import pydotplus
 else:
-    import pydot
+    import pydot       #Keep it here for older variants of Python2 (before 2.7.12)
+    import pydotplus   # If Python 2.7.12 is used then it is the same as Python3
 
 
 
@@ -50,7 +51,8 @@ tree.export_graphviz(classifier,out_file=dot_data,feature_names=flowers.feature_
 if sys.version_info[0] > 2:
     graph = pydotplus.graph_from_dot_data(dot_data.getvalue())
 else:
-    graph = pydot.graph_from_dot_data(dot_data.getvalue())
+    graph = pydot.graph_from_dot_data(dot_data.getvalue())   #Keep it here for older variants of Python2 (before 2.7.12)
+graph = pydotplus.graph_from_dot_data(dot_data.getvalue())
 graph.write_pdf("flowers.pdf")
 
 

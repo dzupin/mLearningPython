@@ -6,6 +6,7 @@ if sys.version_info[0] > 2:
 import matplotlib.pyplot as plt
 
 #to install matplotlib module (sudo pip install matplotlib) you first need to run: sudo apt install python-gtk2-dev
+# For Python2.7 you also need to install Tkinter support: apt-get install python-tk
 
 greyhounds = 500
 labradors = 500
