@@ -1,4 +1,9 @@
 import tensorflow as tf
+# Tensorflow python package is designed to run on CPU build prior to 2011 (without AdvancedVectorExtension instruction set)
+# Therefore, disable this warning if you use CPU 7 years old or newer (or alternatively create your personal tensorflow build).
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
 import numpy as np
 #for performance benchmanrk measure start and later end time stamp
 import time

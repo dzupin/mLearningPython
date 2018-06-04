@@ -1,3 +1,8 @@
+# Tensorflow python package is designed to run on CPU build prior to 2011 (without AdvancedVectorExtension instruction set)
+# Therefore, disable this warning if you use CPU 7 years old or newer (or alternatively create your personal tensorflow build).
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
 #The downloaded MNIST database of handwritten digits, from http://yann.lecun.com/exdb/mnist/, is for our convenience split into three parts:
 # 55,000 data points of training data (mnist.train), 10,000 points of test data (mnist.test), and 5,000 points of validation data (mnist.validation).
 from tensorflow.examples.tutorials.mnist import input_data
