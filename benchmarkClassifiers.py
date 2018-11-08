@@ -9,7 +9,8 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 
 from sklearn import datasets
-from sklearn.cross_validation import train_test_split
+#from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 
 import numpy as np
 #for performance benchmanrk measure start and later end time stamp
