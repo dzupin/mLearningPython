@@ -1,7 +1,7 @@
 import numpy as np
 from sklearn.datasets import load_iris
 from sklearn import tree
-from sklearn.externals.six import StringIO
+from six import StringIO
 import sys
 if sys.version_info[0] > 2:
     import pydotplus
@@ -9,7 +9,7 @@ else:
     import pydot       #Keep it here for older variants of Python2 (before 2.7.12)
     import pydotplus   # If Python 2.7.12 is used then it is the same as Python3
 
-
+import pydotplus
 
 #package scikit-learn provides many sample datasets
 flowers = load_iris()
